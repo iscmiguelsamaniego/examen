@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BussinessSample</string>
+    <string name="title_bussiness">Miscelaneas</string>
+    <string name="title_add">Agregar</string>
+    <string name="grocery_image_descriptions">Imágen relacionada a la miscelanea consultada</string>
+    <string name="no_internet">No se detecta conexión a internet</string>
+</resources>
