@@ -37,7 +37,9 @@ class AdressesFragment : Fragment() {
         recyclerView = view.findViewById(R.id.fr_addresses_recyclerview)
 
         loadAddresses()
+
     }
+
 
     fun loadAddresses() {
         val adapter = AddressAdapter()

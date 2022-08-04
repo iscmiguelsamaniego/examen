@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/gen_dimen_16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gen_dimen_4"
+                    android:padding="@dimen/gen_dimen_8"
+                    android:text="@string/general_label"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/employee_number">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fr_grocery_employee_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gen_dimen_12"
+                        android:hint="@string/full_name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fr_grocery_full_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gen_dimen_12"
+                        android:hint="@string/phone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fr_grocery_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gen_dimen_12"
+                        android:hint="@string/email">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fr_grocery_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gen_dimen_12"
+                        android:hint="@string/address">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fr_grocery_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gen_dimen_12"
+                        android:padding="@dimen/gen_dimen_8"
+                        android:text="@string/evidence_label"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/fragment_add_grocery_loadphoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/fragment_add_grocery_separator"
+                            android:background="@color/accent_color"
+                            android:contentDescription="@string/load_image"
+                            android:padding="@dimen/gen_dimen_6"
+                            android:src="@drawable/ic_action_add_from_gallery" />
+
+                        <View
+                            android:id="@+id/fragment_add_grocery_separator"
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/gen_dimen_4" />
+
+                        <ImageButton
+                            android:id="@+id/fragment_add_grocery_takephoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/fragment_add_grocery_separator"
+                            android:background="@color/primary_color"
+                            android:contentDescription="@string/take_photo"
+                            android:padding="@dimen/gen_dimen_6"
+                            android:src="@drawable/ic_action_take_photo" />
+
+                        <ImageView
+                            android:id="@+id/fragment_add_grocery_imagetaken"
+                            android:layout_width="match_parent"
+                            android:layout_height="194dp"
+                            android:scaleType="fitXY"
+                            android:layout_below="@id/fragment_add_grocery_loadphoto"
+                            android:layout_marginTop="@dimen/gen_dimen_6"
+                            android:contentDescription="@string/imagen_tomada_en_registro_de_datos_de_miscelanea" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/fragment_add_grocery_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gen_dimen_12"
+                        android:background="@color/dark_primary"
+                        android:text="G u a r d a r"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

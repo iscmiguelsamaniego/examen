@@ -9,13 +9,27 @@
         android:id="@+id/navigation_home"
         android:name="samtech.org.bussinesssample.ui.groceries.GroceriesFragment"
         android:label="@string/title_bussiness"
-        tools:layout="@layout/fragment_grocery" />
+        tools:layout="@layout/fragment_grocery" >
+        <action
+            android:id="@+id/action_navigation_home_to_adressesFragment"
+            app:destination="@id/adressesFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_schedulesFragment"
+            app:destination="@id/schedulesFragment" />
+    </fragment>
 
-    <!--android:name="samtech.org.bussinesssample.ui.dashboard.DashboardFragment"-->
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="samtech.org.bussinesssample.ui.groceries.addresses.AdressesFragment"
-        android:label="@string/address"
+        android:name="samtech.org.bussinesssample.ui.addemployee.AddEmployeeFragment"
+        android:label="@string/title_add"
         tools:layout="@layout/fragment_addresses" />
+    <fragment
+        android:id="@+id/adressesFragment"
+        android:name="samtech.org.bussinesssample.ui.groceries.addresses.AdressesFragment"
+        android:label="AdressesFragment" />
+    <fragment
+        android:id="@+id/schedulesFragment"
+        android:name="samtech.org.bussinesssample.ui.groceries.schedules.SchedulesFragment"
+        android:label="SchedulesFragment" />
 
 </navigation>

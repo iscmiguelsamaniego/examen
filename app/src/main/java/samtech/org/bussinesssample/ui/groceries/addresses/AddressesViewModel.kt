@@ -7,17 +7,9 @@ import samtech.org.bussinesssample.database.repositories.AddressRepository
 
 import java.lang.IllegalArgumentException
 
-class AddressesViewModel(
-    private val addressesRepository: AddressRepository
-) : ViewModel(){
+class AddressesViewModel(addressesRepository: AddressRepository) : ViewModel(){
 
     val allAddresses: LiveData<List<Addresses>> = addressesRepository.getAddresses().asLiveData()
-
-    init {
-        viewModelScope.launch {
-
-        }
-    }
 
     class OperatingAddressesViewModelFactory(
         private val addressesRepo: AddressRepository

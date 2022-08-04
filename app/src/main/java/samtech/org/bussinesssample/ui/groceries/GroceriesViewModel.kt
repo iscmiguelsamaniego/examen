@@ -25,17 +25,7 @@ class GroceriesViewModel(
     private val schedulesRepository: SchedulesRepository
 ) : ViewModel() {
 
-    //private val messagesGroceryListener: MessagesGroceryListener
-
     val allGroceries: LiveData<List<Groceries>> = groceriesRepository.getGroceries().asLiveData()
-    val allAddresses: LiveData<List<Addresses>> = addressesRepository.getAddresses().asLiveData()
-    val allSchedules: LiveData<List<Schedules>> = schedulesRepository.getSchedules().asLiveData()
-
-    init {
-        viewModelScope.launch {
-
-        }
-    }
 
     suspend fun clearTables(){
         groceriesRepository.deleteGroceryValues()

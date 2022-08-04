@@ -4,7 +4,18 @@
     <string name="title_add">Agregar</string>
     <string name="grocery_image_descriptions">Imágen relacionada a la miscelanea consultada</string>
     <string name="no_internet">No se detecta conexión a internet</string>
-    <string name="address">Direcciones</string>
+    <string name="no_download_values">No hay datos descargados</string>
+    <string name="address">Direccion</string>
+    <string name="addresses">Direcciones</string>
     <string name="schedules">Horarios</string>
     <string name="view_map">Ver mapa</string>
+    <string name="load_image">Cargar imágen desde galeria</string>
+    <string name="take_photo">Tomar fotografia</string>
+    <string name="evidence_label">Evidencia</string>
+    <string name="general_label">Generales</string>
+    <string name="employee_number">Número de empleado</string>
+    <string name="full_name">Nombre completo</string>
+    <string name="phone">Teléfono</string>
+    <string name="email">Correo electrónico</string>
+    <string name="imagen_tomada_en_registro_de_datos_de_miscelanea">Imagen tomada en registro de datos de miscelanea</string>
 </resources>

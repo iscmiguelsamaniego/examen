@@ -8,21 +8,24 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import samtech.org.bussinesssample.database.dao.AddressesDao
+import samtech.org.bussinesssample.database.dao.EmployeesDao
 import samtech.org.bussinesssample.database.dao.GroceriesDao
 import samtech.org.bussinesssample.database.dao.SchedulesDao
 import samtech.org.bussinesssample.database.entities.Addresses
+import samtech.org.bussinesssample.database.entities.Employees
 import samtech.org.bussinesssample.database.entities.Groceries
 import samtech.org.bussinesssample.database.entities.Schedules
 
 @Database(
-    entities = arrayOf(Groceries::class, Addresses::class, Schedules::class),
+    entities = arrayOf(Groceries::class, Addresses::class, Schedules::class, Employees::class),
     version = 1,
     exportSchema = false
 )
-abstract class BussinessRoomDatabase : RoomDatabase(){
+abstract class BussinessRoomDatabase : RoomDatabase() {
     abstract fun groceriesDao(): GroceriesDao
     abstract fun addressesDao(): AddressesDao
     abstract fun schedulesDao(): SchedulesDao
+    abstract fun employeesDao(): EmployeesDao
 
     companion object {
         @Volatile
@@ -53,7 +56,7 @@ abstract class BussinessRoomDatabase : RoomDatabase(){
             super.onCreate(db)
             INSTANCE?.let { database ->
                 scope.launch {
-                   // database.clearAllTables()
+                    // database.clearAllTables()
                 }
             }
         }
