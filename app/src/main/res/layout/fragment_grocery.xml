@@ -1,140 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.groceries.GroceriesFragment">
+    android:layout_height="match_parent">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="6dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="194dp"
-                android:background="@drawable/ic_information_noimage">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:background="@drawable/transparent_card"
-                    android:padding="@dimen/activity_vertical_margin">
-
-                    <TextView
-                        android:id="@+id/fr_grocery_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="Titulo"
-                        android:textAppearance="?attr/textAppearanceHeadline6"
-                        android:textColor="@color/white" />
-                </FrameLayout>
-            </RelativeLayout>
-
-        </LinearLayout>
-        <!--
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="194dp"
-                android:contentDescription="@string/grocery_image_descriptions"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/ic_information_noimage" />
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/transparent_card">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Titulo"
-                    android:textColor="@color/white"
-                    android:textAppearance="?attr/textAppearanceHeadline6" />
-            </FrameLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Subtitulo"
-                    android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Descripción"
-                    android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary" />
-
-            </LinearLayout>
-
-            <!- Buttons -->
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <!---
-
-      <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.button.MaterialButton
-                    style="?attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:text="accion 1" />
-
-                <com.google.android.material.button.MaterialButton
-                    style="?attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="accion 2" />
-            </LinearLayout>
-            -->
-    <!--
-    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="6dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        card_view:cardCornerRadius="4dp"
-        card_view:cardElevation="4dp"
-        card_view:cardUseCompatPadding="true">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -143,85 +24,70 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/activity_horizontal_margin">
-
+                android:orientation="vertical">
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/fr_grocery_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="La carredana"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/fr_grocery_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="194dp"
+                        android:background="@drawable/ic_information_noimage"
+                        android:contentDescription="@string/grocery_image_descriptions"
+                        android:scaleType="fitXY" />
 
                     <FrameLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/transparent_card">
+                        android:background="@drawable/transparent_card"
+                        android:padding="@dimen/activity_vertical_margin">
+
                         <TextView
-                            android:id="@+id/title"
+                            android:id="@+id/fr_grocery_title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textAlignment="center"
-                            android:text="Title"
-                            android:textColor="@android:color/white"
-                            android:textSize="24sp"
-                            android:layout_margin="5dp"/>
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="@color/white" />
+
                     </FrameLayout>
 
-                    <ImageView
-                        android:id="@+id/fr_grocery_image"
-                        android:layout_width="300dp"
-                        android:layout_height="300dp"
-                        android:layout_gravity="center"
-                        android:contentDescription="@string/grocery_image_descriptions"
-                        android:src="@drawable/ic_information_noimage" />
                 </RelativeLayout>
 
                 <TextView
-                    android:id="@+id/fr_grocery_general_data"
+                    android:id="@+id/fr_grocery_details"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="datos generales"
-                    android:textSize="12sp" />
+                    android:layout_marginTop="@dimen/gen_dimen_4"
+                    android:padding="@dimen/gen_dimen_8"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary" />
 
-
-                <TextView
-                    android:id="@+id/fr_grocery_address_data"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_action_marker"
-                    android:padding="@dimen/gen_dimen_4"
-                    android:text="Direcciones registradas"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:layout_margin="@dimen/gen_dimen_4"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ver todas las direcciones registradas"
-                    android:textAllCaps="false" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/fr_grocery_view_addresses"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/address" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ver Horarios de apertura"
-                    android:textAllCaps="false" />
-
-
-                <org.osmdroid.views.MapView
-                    android:id="@+id/map"
-                    android:layout_width="300dp"
-                    android:layout_height="200dp" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/fr_grocery_view_schedules"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/schedules" />
+                </LinearLayout>
 
             </LinearLayout>
         </ScrollView>
-    </androidx.cardview.widget.CardView>
--->
+    </com.google.android.material.card.MaterialCardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

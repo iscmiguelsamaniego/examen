@@ -2,20 +2,27 @@ package samtech.org.bussinesssample.Utils
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.Dialog
 import android.content.Context
+import android.location.Location
 import android.view.Gravity
 import android.view.View
+import android.view.Window
+import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import org.osmdroid.views.MapView
 import samtech.org.bussinesssample.R
 import samtech.org.bussinesssample.Utils.Constants.ALERT
 import samtech.org.bussinesssample.Utils.Constants.INFO
 import samtech.org.bussinesssample.Utils.Constants.SUCESS
 import samtech.org.bussinesssample.Utils.Constants.WARNING
+import samtech.org.bussinesssample.Utils.MapUtils.setMap
+import java.util.*
 
 object MsgUtils {
 
@@ -76,22 +83,34 @@ object MsgUtils {
         }
     }
 
-    fun toast(ctx: Context?, message: String?) {
-        if (ctx != null) {
-            val toast = Toast.makeText(ctx, message, Toast.LENGTH_SHORT)
-            toast.setGravity(Gravity.CENTER, 0, 0);
-            toast.show()
+    fun showOSMMapAlert(
+        context: Context, paramLocation: Location?,
+        title: String?
+    ) {
+        if (paramLocation != null) {
+            val mapDialog = Dialog(context)
+            mapDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+            Objects.requireNonNull(mapDialog.window)
+                ?.setLayout(
+                    WindowManager.LayoutParams.MATCH_PARENT,
+                    WindowManager.LayoutParams.WRAP_CONTENT
+                )
+            mapDialog.setContentView(R.layout.alert_map)
+            val previewMap: MapView = mapDialog.findViewById(R.id.alert_map_preview_map)
+            setMap(
+                previewMap,
+                true,
+                true,
+                17.5,
+                paramLocation,
+                ContextCompat.getDrawable(
+                    context,
+                    R.drawable.ic_action_marker
+                ),
+                title
+            )
+            mapDialog.setCancelable(true)
+            mapDialog.show()
         }
-    }
-
-    fun AppCompatActivity.showAlert(title: CharSequence, message: CharSequence) {
-        val builder = AlertDialog.Builder(this)
-            .setTitle(title)
-            .setMessage(message)
-            .setPositiveButton("Ok", { dialog, which ->
-            })
-
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
     }
 }

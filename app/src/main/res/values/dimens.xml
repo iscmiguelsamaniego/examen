@@ -35,4 +35,22 @@
     <dimen name="gen_dimen_60">60dp</dimen>
     <dimen name="gen_dimen_120">120dp</dimen>
     <dimen name="gen_dimen_160">160dp</dimen>
+
+    <!-- Text dimentions. -->
+    <dimen name="gen_dimen_txt_12">12sp</dimen>
+    <dimen name="gen_dimen_txt_14">14sp</dimen>
+    <dimen name="gen_dimen_txt_16">16sp</dimen>
+    <dimen name="gen_dimen_txt_18">18sp</dimen>
+    <dimen name="gen_dimen_txt_20">20sp</dimen>
+    <dimen name="gen_dimen_txt_22">22sp</dimen>
+    <dimen name="gen_dimen_txt_24">24sp</dimen>
+    <dimen name="gen_dimen_txt_26">26sp</dimen>
+    <dimen name="gen_dimen_txt_28">28sp</dimen>
+    <dimen name="gen_dimen_txt_30">30sp</dimen>
+    <dimen name="gen_dimen_txt_32">32sp</dimen>
+    <dimen name="gen_dimen_txt_34">34sp</dimen>
+    <dimen name="gen_dimen_txt_36">36sp</dimen>
+    <dimen name="gen_dimen_txt_38">38sp</dimen>
+    <dimen name="gen_dimen_txt_40">40sp</dimen>
+
 </resources>
